@@ -1,0 +1,37 @@
+﻿<Window x:Class="SecurityApplication.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecurityApplication"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="800" FontFamily="Comic Sans MS">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFBBB6B6" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid x:Name="registrationWindow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="Ваш логин:" TextAlignment="Center"/>
+            <TextBox Name="newLoginTextBox" Margin="0 0 0 10"/>
+            <TextBlock Text="Ваш пароль:" TextAlignment="Center"/>
+            <PasswordBox Name="newPasswordBox" Margin="0 0 0 10"/>
+            <TextBlock Text="Повторите пароль:" TextAlignment="Center"/>
+            <PasswordBox Name="repeatPasswordBox" Margin="0 0 0 10"/>
+            <Button Name="registrateButton" Content="Зарегистрироваться" Click="RegistrateButtonClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
